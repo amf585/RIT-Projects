@@ -1,0 +1,322 @@
+/*****************************
+    ISTE 645 Project 2 CSS
+*****************************/
+
+
+/*** GLOBAL STYLES & TAGS ***/
+
+* {
+    margin: 0;
+    padding: 0;
+    /*-moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;*/
+    box-sizing: border-box !important;
+}
+
+a {
+    color: #59a9c2;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+a:active {
+    color: #d0f4ea;
+}
+
+a:hover {
+    text-decoration: none;
+    text-shadow: 1px 1px black;
+}
+
+a:visited {
+    color: #59594a;
+    text-decoration: underline;
+}
+
+body, html {
+    background-color: #eeeeee;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+}
+
+footer {
+    background-color: rgb(88,88,73);
+    clear: both;
+    color: white;
+    margin-top: 4em;
+    min-height: 5em;
+    padding: 2em 1em 1em 1em;
+    text-shadow: 1px 1px black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Helvetica, sans-serif;
+    margin-bottom: 1em;
+    text-shadow: 1px 1px #59a9c2;
+}
+
+h1{
+    font-size: 3em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+    line-height: 1.2;
+}
+
+li {
+    padding-left: .5em;
+}
+
+p {
+    margin-bottom: 2em;
+}
+
+textarea { 
+    resize: vertical; 
+}
+
+ul {
+    padding-left: 2em;
+}
+
+
+
+
+/*** CLASSES ***/
+
+.add-box-shadow {
+	/*-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.8);*/
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.8);
+}
+
+.add-text-shadow {
+    text-shadow: 1px 1px black;
+}
+
+.center-all {
+    margin: auto;
+    text-align: center;
+}
+
+.center-div {
+    margin: auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.divider {
+    margin: 0 auto 2em;
+    width: 97%;
+}
+
+.half-width {
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+
+img.img-btn:hover {
+    /*-webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.8);*/
+	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.8);
+    transform: translateY(-2px);
+}
+
+.img-responsive {
+    max-height: 100%;
+	max-width: 100%;
+}
+
+.panel {
+    padding: 1em; 
+}
+
+.row {
+    clear: both;
+    margin: 2em auto 4em auto;
+    padding: 1em 2em 3em 2em;
+    width: 100%;
+}
+
+.row-style-b {
+    background-color: #eeeeee;
+}
+
+.third-width {
+    display: inline-block;
+    float: left;
+    width: 33.33333%;
+}
+
+.transparent-box {
+    background-color: rgba(0, 0, 0, .75);
+    color: white;
+    margin: 2em auto;
+    padding: 2em;
+}
+.transparent-box #about-quote {
+    margin: 2em auto 0;
+    width: 80%;
+}
+.transparent-box h2 {
+    font-size: 1.8em;
+}
+
+.transparent-box-title {
+    background-color: rgba(0, 0, 0, .75);
+    color: white;
+    margin: auto;
+    padding: .5em;
+}
+
+
+/*** IDs ***/
+
+#header {
+    background: url('../img/parkshot.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    margin: 0 auto;
+}
+
+#header-logo {
+	padding: 6%;
+}
+
+#topNav {
+    background-color: rgba(88,88,73, 0.7);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    height: 50px;
+    width: 100%;
+}
+
+#recreation-pic-link {
+    background: url("../img/rec_button.jpg") no-repeat center;
+    height: 300px;
+}
+
+#topNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#topNav ul li {
+    float: left;
+}
+
+#topNav ul li:hover,
+#navList li.active {
+    background-color: rgba(88,88,73, 0.85);
+    max-height: 50px;
+}
+
+#topNav ul li:hover a,
+#navList li.active a {
+    color: #59a9c2;
+}
+
+#topNav ul li a {
+    color: white;
+    display: inline-block;
+    font-size: 18px;
+    padding: .8em .9em;
+    text-decoration: none;
+    transition: 0.2s;
+    text-align: center;
+    text-shadow: 1px 1px black;
+}
+
+#topNav ul li.icon {
+    display: none;
+}
+
+
+
+
+/*** MEDIA QUERIES ***/
+
+@media screen and (max-width: 840px){
+
+    .half-width,
+    .third-width {
+        width: 100%;
+    }
+    
+    .row {
+        margin: 1em auto;
+        padding: .5em;
+    }
+
+    #topNav ul li:not(:first-child) {
+        display: none;
+    }
+    
+    #topNav ul li.icon {
+        float: right;
+        display: inline-block;
+    }
+
+    #topNav ul.responsive {
+        position: relative;
+    }
+    
+    #topNav ul.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    #topNav ul.responsive li {
+        float: none;
+        display: inline;
+    }
+    
+    #topNav ul.responsive li a {
+        display: block;
+        text-align: left;
+    }  
+    
+    ul#navList.responsive {
+        background-color: rgba(88,88,73, .95);
+    }
+    
+    ul#navList.responsive li a {
+        font-size: 1.5em;
+    }
+ 
+}
+
+@media screen and (max-width: 480px){
+
+    #header {
+        background: url('../img/parkshot_mobile.jpg');
+        background-position: center;
+        background-repeat: no-repeat; 
+        margin: 0 auto;
+        max-height: 225px;
+    }
+    
+}
+
+
+
+
+
+
+
+
